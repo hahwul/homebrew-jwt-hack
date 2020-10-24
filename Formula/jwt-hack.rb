@@ -2,16 +2,16 @@
 class JwtHack < Formula
   desc "Hack the JWT(JSON Web Token) / jwt-hack is JWT hacking, security testing utility"
   homepage "https://www.hahwul.com"
-  version "1.0.1"
+  version "1.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.1/jwt-hack_1.0.1_darwin_amd64.tar.gz"
-    sha256 "a1e0c020333701df2377112e4189701ffb946da1b26c300d9dc6b2bc7107d756"
+    url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.2/jwt-hack_1.0.2_darwin_amd64.tar.gz"
+    sha256 "d2f01282ef2fdf9a60dd80a5fe71235e2b03f51589ba2aa21a453f7540fa286f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.1/jwt-hack_1.0.1_linux_amd64.tar.gz"
-      sha256 "2f7df303dd1c30989293516d5a4dfa7b9b25fd5c5e33107ab971ecdd0dd45c38"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.2/jwt-hack_1.0.2_linux_amd64.tar.gz"
+      sha256 "e4a0d39e2bdf8d2c77af9600ec1c2390d10b1b8b0d7cdca4328e6730ff215e6a"
     end
   end
 
