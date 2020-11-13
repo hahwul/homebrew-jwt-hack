@@ -2,16 +2,25 @@
 class JwtHack < Formula
   desc "Hack the JWT(JSON Web Token) / jwt-hack is JWT hacking, security testing utility"
   homepage "https://www.hahwul.com"
-  version "1.0.4"
+  version "1.0.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.4/jwt-hack_1.0.4_darwin_amd64.tar.gz"
-    sha256 "ee9cd60bf047a62a89200e37ad9f5e861d96bc2cc1d8dcd270edb8d7a37b9363"
+    url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.5/jwt-hack_1.0.5_darwin_amd64.tar.gz"
+    sha256 "b190f347fbaa0db06ccf1f722f22ed07c4034709fddbe254dc0e794793712f6d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.4/jwt-hack_1.0.4_linux_amd64.tar.gz"
-      sha256 "9075b97afb2b79bfd144e4a8006c5400ab9cfee54ff0b8fb8111e9381ed317aa"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.5/jwt-hack_1.0.5_linux_amd64.tar.gz"
+      sha256 "ddf2f9a9f4243e336788d616e1458c71bd492f5a9de16c471bcbcaf0ed00543c"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.5/jwt-hack_1.0.5_linux_arm64.tar.gz"
+        sha256 "5b719d45bcdb44043cc9f3bedacc1e06722eab30278c80ff92792327d1ae47ac"
+      else
+        url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.5/jwt-hack_1.0.5_linux_armv6.tar.gz"
+        sha256 "bbc45b0f92d1bf90ca7b785ee2b18c4383ff98d7664ef4d496b4a4aa5a191964"
+      end
     end
   end
 
