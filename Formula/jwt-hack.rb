@@ -5,28 +5,32 @@
 class JwtHack < Formula
   desc "Hack the JWT(JSON Web Token) / jwt-hack is JWT hacking, security testing utility"
   homepage "https://www.hahwul.com"
-  version "1.0.7"
+  version "1.1.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.7/jwt-hack_1.0.7_darwin_amd64.tar.gz"
-      sha256 "80eacce5d7bd1d6bb25aa83fab266ce4bb7ed13a31243fada4acec7862e3f720"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_darwin_amd64.tar.gz"
+      sha256 "8dba85509ee2e1dfbbbf2e03589e250e10bf7c2435af4a56edfa42ba2bc0ddeb"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_darwin_arm64.tar.gz"
+      sha256 "be8142bc98043d25df9d055712e3aa3ee2a2213678db042f46290e2e34ee85ce"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.7/jwt-hack_1.0.7_linux_amd64.tar.gz"
-      sha256 "9a77af3cf317799c45f4d662447de72e43222ece917451c8ae1fcf6811137df4"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_linux_amd64.tar.gz"
+      sha256 "802a2467ef600f3d3e95094e1cc2d461401982935ed821ccb3b19d5c0092319f"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.7/jwt-hack_1.0.7_linux_armv6.tar.gz"
-      sha256 "648b290894ea9841a46263fefacc5ea0b69ea5ff445158218fc650336ebda8d8"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_linux_armv6.tar.gz"
+      sha256 "8e0876d14aed4a8a7bb1631e5afb97e0bf0dbd33bb479642618a2059db6d2901"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.0.7/jwt-hack_1.0.7_linux_arm64.tar.gz"
-      sha256 "0220e87cf388b965c89dd4b54981d73df1b8ed3dcb37ba6d200ee7acb925eccb"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_linux_arm64.tar.gz"
+      sha256 "b30064e1dd25221cecfe8c78cf4a0ee19d75dfb5bfcd44559a635ad2bf50b1f8"
     end
   end
 
