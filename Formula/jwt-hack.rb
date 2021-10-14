@@ -5,32 +5,32 @@
 class JwtHack < Formula
   desc "Hack the JWT(JSON Web Token) / jwt-hack is JWT hacking, security testing utility"
   homepage "https://www.hahwul.com"
-  version "1.1.0"
+  version "1.1.1"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_darwin_amd64.tar.gz"
-      sha256 "8dba85509ee2e1dfbbbf2e03589e250e10bf7c2435af4a56edfa42ba2bc0ddeb"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_darwin_arm64.tar.gz"
-      sha256 "be8142bc98043d25df9d055712e3aa3ee2a2213678db042f46290e2e34ee85ce"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_darwin_arm64.tar.gz"
+      sha256 "536db49a3dd291018d0f528b22019499519f5aeb87632fd6deaac6de290b8bf7"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_darwin_amd64.tar.gz"
+      sha256 "f2f2ae8cfdb24eb7c6356e38315d551a73c5f50f5b45a8a582ae04795e08ef9f"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_linux_amd64.tar.gz"
-      sha256 "802a2467ef600f3d3e95094e1cc2d461401982935ed821ccb3b19d5c0092319f"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_linux_armv6.tar.gz"
-      sha256 "8e0876d14aed4a8a7bb1631e5afb97e0bf0dbd33bb479642618a2059db6d2901"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_linux_armv6.tar.gz"
+      sha256 "d1acbbb71deb7ecb14ccde86eb23ab65365eaedfe0bf14bf6d8204511a7cb7a6"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_linux_amd64.tar.gz"
+      sha256 "9e27c3d7d0720a6186f0982aa2857a89fb1339fa8ed7791893c3d83c44418151"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.0/jwt-hack_1.1.0_linux_arm64.tar.gz"
-      sha256 "b30064e1dd25221cecfe8c78cf4a0ee19d75dfb5bfcd44559a635ad2bf50b1f8"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_linux_arm64.tar.gz"
+      sha256 "8200b9fa54154526c1bffadbc1eac81c5a7041858670db61ab5f1c9b26a4f803"
     end
   end
 
