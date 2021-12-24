@@ -5,37 +5,52 @@
 class JwtHack < Formula
   desc "Hack the JWT(JSON Web Token) / jwt-hack is JWT hacking, security testing utility"
   homepage "https://www.hahwul.com"
-  version "1.1.1"
-  bottle :unneeded
+  version "1.1.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_darwin_arm64.tar.gz"
-      sha256 "536db49a3dd291018d0f528b22019499519f5aeb87632fd6deaac6de290b8bf7"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_darwin_amd64.tar.gz"
-      sha256 "f2f2ae8cfdb24eb7c6356e38315d551a73c5f50f5b45a8a582ae04795e08ef9f"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.2/jwt-hack_1.1.2_darwin_amd64.tar.gz"
+      sha256 "c7411abba1725a913d20c2a99fa9f361681b8250c482311a81faea46f6d883f6"
+
+      def install
+        bin.install "jwt-hack"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.2/jwt-hack_1.1.2_darwin_arm64.tar.gz"
+      sha256 "5fe70764dc8e31d63db60d3145f593b90b91ea7194be2d75fe81850f8a60e5f9"
+
+      def install
+        bin.install "jwt-hack"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_linux_armv6.tar.gz"
-      sha256 "d1acbbb71deb7ecb14ccde86eb23ab65365eaedfe0bf14bf6d8204511a7cb7a6"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_linux_amd64.tar.gz"
-      sha256 "9e27c3d7d0720a6186f0982aa2857a89fb1339fa8ed7791893c3d83c44418151"
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.2/jwt-hack_1.1.2_linux_armv6.tar.gz"
+      sha256 "6031e8ac642aef859be3e9e90aba439a2639962387349bc960f8cf77efaccded"
+
+      def install
+        bin.install "jwt-hack"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.1/jwt-hack_1.1.1_linux_arm64.tar.gz"
-      sha256 "8200b9fa54154526c1bffadbc1eac81c5a7041858670db61ab5f1c9b26a4f803"
-    end
-  end
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.2/jwt-hack_1.1.2_linux_arm64.tar.gz"
+      sha256 "1acd680beeb06a83dcd307f42bc8fa608348ad3c9594b9d0e507f0105e3fc24c"
 
-  def install
-    bin.install "jwt-hack"
+      def install
+        bin.install "jwt-hack"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/hahwul/jwt-hack/releases/download/v1.1.2/jwt-hack_1.1.2_linux_amd64.tar.gz"
+      sha256 "6fbad8774ed34fa4df9f62c52846ca63f48a9b4bb7e56dcdb0c6a83500246c52"
+
+      def install
+        bin.install "jwt-hack"
+      end
+    end
   end
 
   test do
