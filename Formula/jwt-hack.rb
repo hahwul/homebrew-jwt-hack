@@ -5,8 +5,8 @@
 class JwtHack < Formula
   desc "Json web token hack toolkit"
   homepage "https://github.com/hahwul/jwt-hack"
-  url "https://github.com/hahwul/jwt-hack/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "d54521395e1ba6a633e9ce032efd8c9f4574c48103ae976b5d0c9951f1b4bb70"
+  url "https://github.com/hahwul/jwt-hack/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "b5c0de9923d4ee20037873906223ac14c0c9b1e9623cc3a87e3ce5434d3ca0bf"
   license "MIT"
 
   depends_on "rust"
