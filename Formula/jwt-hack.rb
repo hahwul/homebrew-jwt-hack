@@ -5,15 +5,15 @@
 class JwtHack < Formula
   desc "Json web token hack toolkit"
   homepage "https://github.com/hahwul/jwt-hack"
-  url "https://github.com/hahwul/jwt-hack/archive/refs/tags/v2.4.0.tar.gz"
-  sha256 "c167f595e5552dfbf5bd3fd79e2f061b1ad9d99790ffd036351172997a6de678"
+  url "https://github.com/hahwul/jwt-hack/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "85c6d8ade6f60ccafd12283c82ee1368874bc00af90f11fcad8f252baa197374"
   license "MIT"
 
   depends_on "rust"
 
   def install
     system "cargo build --release"
-bin.install "target/release/jwt-hack"
+    bin.install "target/release/jwt-hack"
   end
 
   test do
